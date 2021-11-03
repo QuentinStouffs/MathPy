@@ -7,10 +7,7 @@
 # de l’exercice précédent avec affichage du résultat
 import numpy as np
 from numpy import matrix
-
-A =np.array([[4, 2, 0],
-     [4, 1, 6],
-     [2, 8, 3]])
+from enter_the_matrix import *
 
 def gauss_jordan(M) :
     A = matrix(M[:])
@@ -41,7 +38,13 @@ def transvection(A, i, j, alpha):
     A[j, :] = A[j, :] - alpha * A[i, :]
     return A
 if __name__ == '__main__':
+    # A = np.array([[4, 2, 0],
+    #               [4, 1, 6],
+    #               [2, 8, 3]])
+
+    A = create_matrix(ask_matrix())
     print(A)
     print('-------------------')
     print(gauss_jordan(A))
+    input('enter to stop')
 

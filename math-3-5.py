@@ -4,10 +4,11 @@
 
 from numpy.linalg import *
 from numpy import matrix
+from enter_the_matrix import *
 
-A =matrix([[1., 2., 3.],
-     [4., 5., 6.],
-     [7., 8., 1.]])
+# A =matrix([[1., 2., 3.],
+#      [4., 5., 6.],
+#      [7., 8., 1.]])
 
 # A =matrix([[1., 2., 2., 2.],
 #      [1., 3., -2., -1.],
@@ -57,9 +58,9 @@ def det_gauss(M) :
     return p
 
 if __name__ == '__main__':
+    A = create_matrix(ask_matrix())
     print(A)
     print('-------------------')
-    print(det(A))
-    print('-------------------')
     print(det_gauss(A))
+    input("enter to stop")
 
